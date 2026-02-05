@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>설문조사</title>
+    </head>
+    <body>
+        <header>
+            <h1>Flask 설문 시스템</h1>
+            <hr>
+        </header>
+
+        <h2>
+            <!-- /result 라우트로 GET 요청 보내기 -->
+             <form action="/result" method="get">
+                <!-- question 리스트의 각 항목을 q로 꺼내서 반복 출력 -->
+                 {% for q in questions %}
+                 <p>
+                    <!-- 각 항목의 질문 번호 및 질문 내용 출력 -->
+                     {{ loop.index }}.{{ q }}
+                     <input type= "text" name= "answer">
+                 </p>
+                 {% endfor %}
+                 <button type="submit">제출</button>
+             </form>
+             <footer>
+                <hr>
+                <p>By ⓒYoonMawel</p>
+             </footer>
+        </h2>
+    </body>
+</html>
