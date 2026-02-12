@@ -1,0 +1,2 @@
+Flask == 3.0.0 # 웹 서버 + 라우팅 + Jinja2 제공
+Flask-SQLAlchemy == 3.1.1 # orm을 Flask에서 쓰기 편하게 감싸줌.
